@@ -4,6 +4,7 @@ let topperRes = document.querySelector("h2");
 let fields =document.querySelectorAll(".field");
 let btn =document.getElementById("play-again");
 let realBtn= document.querySelector(".btn");
+let body = document.querySelector("body");
 
 let top_left =document.getElementById("top-left");
 let top_middle =document.getElementById("top-middle");
@@ -83,6 +84,7 @@ board.addEventListener('mousedown', function (e) {
             btn.style.display="flex";
             board.style.display="none";
             topper.textContent="";
+            body.style.overflow="hidden";
         }else if(isTie()){
             topperRes.textContent="TIED!";
             btn.style.display="flex";
