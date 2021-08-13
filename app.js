@@ -27,7 +27,6 @@ function isTie(){
     fields.forEach(function(field){
         if(field.classList.contains("x") || field.classList.contains("circle")){
             cnt++;
-            console.log(cnt);
         }
     })
     if(cnt>8)return true;
@@ -61,16 +60,16 @@ function isWinner(curr){
 }
 
 function switchCurr(){
-    console.log("Switching!");
     if(curr==" x"){
         return " circle";
     }else if(curr==" circle") {
         return " x";
     };
 };
+
 function changeTopper(a){
     topper[0].textContent=`${a}'s turn!`;
-}
+};
 
 board.addEventListener('mousedown', function (e) {
     if(e.target.classList=="field"){
@@ -90,6 +89,7 @@ board.addEventListener('mousedown', function (e) {
             btn.style.display="flex";
             board.style.display="none";
             topper.textContent="";
+            body.style.overflow="hidden";
         }
         
     }
